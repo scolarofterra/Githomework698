@@ -19,6 +19,10 @@ resource "google_compute_instance_template" "tdd1007-template-server" {
   disk {
     source_image = "cos-cloud/cos-stable"
   }
+ 
+  network_interface {
+     network = "default"
+  }
 
   lifecycle {
     create_before_destroy = true
