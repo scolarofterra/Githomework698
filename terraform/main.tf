@@ -7,6 +7,7 @@ terraform {
 }
 provider "google" {
   region = "us-central1"
+  project = "comp698-tdd1007"
 }
 
 resource "google_compute_instance_template" "tdd1007-template-server" {
