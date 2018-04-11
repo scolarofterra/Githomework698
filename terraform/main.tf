@@ -34,5 +34,5 @@ resource "google_compute_instance_group_manager" "tdd1007-watcher-server" {
   instance_template  = "${google_compute_instance_template.tdd1007-template-server.self_link}"
   base_instance_name = "tdd1007-watcher-server"
   zone               = "us-central1-a"
-  target_size        = "1"
+  target_size        = "2"
 }
