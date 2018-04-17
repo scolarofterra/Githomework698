@@ -31,3 +31,10 @@ resource "google_compute_instance_group_manager" "tdd1007-watcher-server" {
   zone               = "us-central1-a"
   target_size        = "1"
 }
+
+
+resource "google_storage_bucket" "image-store" {
+  project  = "comp698-tdd1007"
+  name     = "makethisbucketgreatagain"
+  location = "us-central1"
+}
