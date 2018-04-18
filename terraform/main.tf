@@ -14,6 +14,7 @@ resource "google_compute_instance_template" "tdd1007-template-server" {
   name_prefix  = "tdd1007templateserver-"
   machine_type = "f1-micro"
   region       = "us-central1"
+  tags = ["http-server"]
 
   // boot disk
   disk {
@@ -22,7 +23,7 @@ resource "google_compute_instance_template" "tdd1007-template-server" {
  
   network_interface {
      network = "default"
-     
+
      access_config {
           // Ephemeral IP
     }
