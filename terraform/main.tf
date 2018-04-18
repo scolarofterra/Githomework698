@@ -18,10 +18,10 @@ resource "google_compute_instance_template" "tdd1007-template-server" {
   // boot disk
   disk {
     source_image = "cos-cloud/cos-stable"
--  }
-- 
--  network_interface {
--     network = "default"
+  }
+ 
+  network_interface {
+     network = "default"
     }
 
   lifecycle {
