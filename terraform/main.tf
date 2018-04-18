@@ -38,6 +38,9 @@ resource "google_compute_instance_template" "tdd1007-template-server" {
   	restartPolicy: Always
 EOF
   }
+  access_config {
+          // Ephemeral IP
+    }
 }
 
 resource "google_compute_instance_group_manager" "tdd1007-watcher-server" {
