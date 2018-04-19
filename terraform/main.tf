@@ -42,13 +42,13 @@ resource "google_compute_instance_template" "tdd1007-template-server" {
   }
   metadata {
     gce-container-declaration = <<EOF
-	spec:
-  	containers:
-    	image: 'gcr.io/comp698-tdd1007/github-scolarofterra-githomework698:48ae42ec9a9deb3d01417111e4c3b56bb2acb546'
-    	name: service-container
-    	stdin: false
-    	tty: false
-  	restartPolicy: Always
+spec:
+  containers:
+    - image: 'gcr.io/comp698-tdd1007/github-scolarofterra-githomework698:48ae42ec9a9deb3d01417111e4c3b56bb2acb546'
+    name: service-container
+    stdin: false
+    tty: false
+  restartPolicy: Always
 EOF
   }
 
