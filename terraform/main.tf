@@ -15,6 +15,14 @@ resource "google_compute_instance_template" "tdd1007-template-server" {
   machine_type = "f1-micro"
   region       = "us-central1"
   tags = ["http-server"]
+  service_account {
+    scopes = [
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/devstorage.read_write",
+    ]
+  }
+
 
   // boot disk
   disk {
